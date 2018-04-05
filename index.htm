@@ -1,0 +1,174 @@
+<html>
+<head>
+  <title>Socio Shopping</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.png">
+
+</head>
+<body>
+<div class="loader"></div>
+<div class="content">
+  <div class="container">
+  <nav role="navigation" class="navigation">
+    <ul class="menu">
+      <li class="main-user"><i class="fa fa-home" aria-hidden="true"></i></li>
+      <li class="main-home"><i class="fa fa-shopping-bag" aria-hidden="true"></i></li>
+      <li class="main-stats"><i class="fa fa-align-right" aria-hidden="true"></i></li>
+      <li class="main-clock"><i class="fa fa-clock-o" aria-hidden="true"></i></li>
+      <li class="main-trophy"><i class="fa fa-trophy" aria-hidden="true"></i></li>
+      <li class="main-shopping"><i class="fa fa-user-o" aria-hidden="true"></i></li>
+      <li class="main-cutlery"><i class="fa fa-cutlery" aria-hidden="true"></i></li>
+      <li class="main-cog"><i class="fa fa-cog" aria-hidden="true"></i></li>
+    </ul>
+  </nav>
+  <main role="main" class="main">
+
+    <section class="main__home page" id="main-home">
+      <header>
+        <nav>
+          <ul class="account">
+            <li><i class="fa fa-bullhorn" aria-hidden="true"></i><span class="circle-status"></span></li>
+            <li>Hello!</li>
+            <li><img src="avatar.png" alt="user profile" class="account__avatar"/></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main__home--content">
+        <h1>Socio <span class="plus">+</span> Cross<h1>
+        <h2>Ultimate Fitness Zone</h2>
+        <div class="product-img">
+          <table width="100%">
+            <tr>
+              <td align="center">
+          <img src="ball.jpg">
+          <h1>football</h1><br>
+          <a href="#" class="btn btn-pink right">Shop Now</a>
+            </td>
+            <td><div class="vl"></div>
+            </td>
+          <td align="center">  <img src="ball2.jpg">
+            <h1>rugby ball</h1><br>
+            <a href="#" class="btn btn-pink right">Shop Now</a>
+          </td></tr></table>
+        </div>
+
+      </main>
+    </section>
+
+    <section class="main__stats page" id="main-stats">
+      <h1>Socio <span class="plus">+</span> Cross<h1>
+      <h2>performance unleashed</h2>
+      <!--<img src="https://1n4rcn88bk4ziht713dla5ub-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/FitFreshillustration.png" alt="user stats"/>
+-->
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js" type="text/javascript"></script>
+<div align="center" style="width:65%;">
+<canvas id="canvas"></canvas>
+</div>
+<script>
+var config = {
+type: 'line',
+data: {
+labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+datasets: [{
+  label: 'FITNESS',
+  backgroundColor: window.chartColors.red,
+  borderColor: window.chartColors.red,
+  data: [10, 30, 39, 20, 25, 34, -10],
+  fill: false,
+}, {
+  label: 'FATIGUE',
+  fill: false,
+  backgroundColor: window.chartColors.blue,
+  borderColor: window.chartColors.blue,
+  data: [18, 33, 22, 19, 11, 39, 30],
+}]
+},
+options: {
+responsive: true,
+title: {
+  display: true,
+  text: 'FITNESS'
+},
+scales: {
+  yAxes: [{
+    ticks: {
+
+      // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+      suggestedMin: 10,
+
+      // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+      suggestedMax: 50
+    }
+  }],
+  xAxes: [{
+    ticks: {
+    }
+  }],
+}
+}
+};
+
+window.onload = function() {
+var ctx = document.getElementById('canvas').getContext('2d');
+window.myLine = new Chart(ctx, config);
+};
+</script>
+    </section>
+
+    <section class="main__clock page" id="main-clock">
+      <h1>Socio <span class="plus">+</span> Cross<h1>
+      <h2>Workout of the Day</h2>
+      <img src="sched.png" alt="Schedule"/>
+    </section>
+
+    <section class="main__user page" id="main-user">
+      <h1>Socio <span class="plus">+</span> Cross<h1>
+      <h2>Ride to Fitness</h2>
+      <div class="login-page">
+        <div class="form">
+          <form class="register-form">
+            <input type="text" placeholder="name">
+            <input type="password" placeholder="password">
+            <input type="text" placeholder="email address">
+            <button>create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+          <form class="login-form">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <button>login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="main__trophy page" id="main-trophy">
+      <center><br><br><h1>COMING SOON</h1><br><h2>User Achievements</h2><br><i class="fa fa-trophy fa-10x" aria-hidden="true"></i></center>
+
+    </section>
+
+    <section class="main__shopping page" id="main-shopping">
+      <center><br><br><h1>COMING SOON</h1><br><h2>User Profile</h2><br><i class="fa fa-user-o fa-10x" aria-hidden="true"></i></center>
+
+    </section>
+
+    <section class="main__cutlery page" id="main-cutlery">
+      <h1>Socio <span class="plus">+</span> Cross<h1>
+      <h2>Eat Healthy, Live healthy</h2>
+      <img src="diet.jpg" alt="Diet Plan"/>
+    </section>
+
+     <section class="main__cog page" id="main-cog">
+       <center><br><br><h1>COMING SOON</h1><br><h2>Account Settings</h2><br><i class="fa fa-cog fa-10x" aria-hidden="true"></i></center>
+    </section>
+
+  </main>
+  </div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+<script src="style.js" type="text/javascript"></script>
+</html>
